@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { useDebounce } from "use-debounce";
 
+import { PriceEta } from "@/components/PriceEta";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -160,9 +161,11 @@ export function RepairsAccessoriesTabs({
                         className="flex items-center justify-between rounded-xl border border-border/40 bg-muted/40 px-4 py-3"
                       >
                         <span className="font-medium text-foreground">{issue.name}</span>
-                        <span className="text-xs uppercase tracking-wide text-brand">
-                          from ${issue.startsAt} Â· {issue.eta}
-                        </span>
+                        <PriceEta
+                          price={issue.startsAt}
+                          eta={issue.eta}
+                          className="text-xs uppercase tracking-wide text-brand"
+                        />
                       </li>
                     ))}
                   </ul>

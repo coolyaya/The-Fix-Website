@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useMemo, useState } from "react";
 
@@ -236,7 +236,7 @@ function ServiceCard({ service }: ServiceCardProps) {
 }
 
 function getOptionLabel(
-  option: Service["variants"][number] | Service["models"][number]
+  option: NonNullable<Service["variants"]>[number] | NonNullable<Service["models"]>[number]
 ): string {
   return "option" in option ? option.option : option.model;
 }

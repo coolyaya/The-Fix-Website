@@ -24,7 +24,7 @@ export function PriceEta({
       <span
         aria-hidden="true"
         className={cn(
-          "mx-1 inline-flex h-1 w-1 items-center justify-center before:block before:h-full before:w-full before:rounded-full before:bg-current before:content-['']",
+          "mx-1 h-1 w-1 flex-shrink-0 rounded-full bg-current self-center",
           separatorClassName
         )}
       />

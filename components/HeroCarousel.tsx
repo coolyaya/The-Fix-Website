@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -19,8 +19,8 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     title: "iPhone 17 drop protection",
-    subtitle: "Latest MagSafe-ready cases in stock now with custom colors.",
-    image: "/promos/iphone17-feature.svg",
+    subtitle: "Experience the new A19 Fusion display and MagSafe+ accessories for launch day.",
+    image: "/promos/iphone-17.jpg",
     ctaLabel: "Shop accessories",
     ctaHref: "/services?tab=accessories",
   },

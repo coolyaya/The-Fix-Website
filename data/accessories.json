@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "name": "iPhone 17 Impact Case",
     "tags": ["MagSafe", "Clear", "Anti-Yellow"],
@@ -10,21 +10,21 @@
     "name": "USB-C 30W Charger",
     "tags": ["Fast Charge", "Compact"],
     "priceRange": "$24-$29",
-    "image": "/promos/charger.svg",
+    "image": "/promos/charger.jpg",
     "compatible": ["iPhone", "Android", "Tablets"]
   },
   {
     "name": "Premium Braided USB-C Cable",
     "tags": ["6ft", "Kevlar"],
     "priceRange": "$14-$24",
-    "image": "/promos/braided-cable.svg",
+    "image": "/promos/braided-cable.webp",
     "compatible": ["USB-C Devices"]
   },
   {
     "name": "Magnetic Wireless Car Mount",
     "tags": ["360 Swivel", "Vent Mount"],
     "priceRange": "$29-$39",
-    "image": "/promos/car-mount.svg",
+    "image": "/promos/car-mount.webp",
     "compatible": ["MagSafe Phones", "Magnetic Plates"]
   },
   {
@@ -45,7 +45,7 @@
     "name": "Noise-Cancelling Wireless Earbuds",
     "tags": ["Bluetooth 5.3", "24hr Battery"],
     "priceRange": "$59-$89",
-    "image": "/promos/earbuds.svg",
+    "image": "/promos/earbuds.jpg",
     "compatible": ["iOS", "Android"]
   },
   {

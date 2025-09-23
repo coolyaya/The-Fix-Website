@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# The Fix – Next.js App
 
-## Getting Started
+Marketing and light commerce site for The Fix device repair shops. Built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and shadcn/ui components. Includes a hero carousel, reviews marquee, services catalog, locations search with Mapbox (or Google) geocoding, and a support center with AI-assisted chat plus ticket intake.
 
-First, run the development server:
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 and explore the Home, Services, Locations, About, and Support pages. Run `pnpm lint` before committing and `pnpm build` to validate production output.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create `.env.local` (already scaffolded) and populate as needed:
 
-## Learn More
+```
+OPENAI_API_KEY=
+MAPBOX_TOKEN=
+NEXT_PUBLIC_MAPBOX_TOKEN=
+GOOGLE_MAPS_API_KEY=
+```
 
-To learn more about Next.js, take a look at the following resources:
+- `OPENAI_API_KEY` enables real responses for the AI concierge and ticket summariser. Without it, deterministic mock replies are returned so the UI still works offline.
+- `MAPBOX_TOKEN` (server-side) powers the `/api/geocode` proxy. `NEXT_PUBLIC_MAPBOX_TOKEN` exposes a restricted token for the interactive Mapbox GL map. If you prefer Google Maps geocoding, leave the Mapbox values empty and set `GOOGLE_MAPS_API_KEY` instead.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Restart the dev server after changing environment variables.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Data & extensibility
 
-## Deploy on Vercel
+Local JSON under `data/` seeds repairs, accessories, locations, and reviews. Swap to a real backend by replacing those imports with fetchers (or hooking the files into a CMS) and reusing the existing TypeScript types.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `data/repairs.json` – categories, models, pricing, SLAs.
+- `data/accessories.json` – featured retail catalog.
+- `data/locations.json` – store metadata + image paths.
+- `data/reviews.json` – testimonial snippets for the marquee.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Images live in `public/promos/` and `public/locations/`. Replace the SVG placeholders with photography or marketing assets when ready.
+
+## shadcn/ui components
+
+The project is initialised with the shadcn registry and includes Button, Card, Tabs, Input, Textarea, Badge, Sheet, Dialog, Select, and Checkbox primitives. Add more via:
+
+```bash
+pnpm dlx shadcn@latest add [component]
+```
+
+Custom UI building blocks (hero carousel, reviews marquee, locations explorer, etc.) live under `components/`.
+
+## Maps & geocoding abstraction
+
+`lib/geocode.ts` checks Mapbox first, then Google Maps if a token is available. The `/api/geocode` route adds a lightweight per-IP rate limit and falls back to known store coordinates when no provider credentials exist.
+
+`components/Map.tsx` expects `NEXT_PUBLIC_MAPBOX_TOKEN` for the interactive experience. Without it, a friendly placeholder renders so pages still pass QA. Swap to another mapping library by editing this component only.
+
+## AI integration
+
+`lib/ai.ts` wraps the OpenAI client. The `/api/support` route supports two modes:
+
+- `mode: "chat"` for FixBot conversations.
+- `mode: "ticket"` (default) for ticket submissions from the support form.
+
+Responses include a `ticketId`, `summary`, and `nextSteps`, and all payloads are logged server-side for easy CRM wiring.
+
+## Deployment notes
+
+- Update `metadataBase` in `app/layout.tsx` before production deploys.
+- Configure Mapbox/Google environment variables in your hosting provider (e.g., Vercel project settings).
+- `public/og-default.png` powers social sharing cards; replace it with on-brand artwork when available.
+
+Happy fixing!
+

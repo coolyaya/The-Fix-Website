@@ -1,0 +1,84 @@
+﻿[
+  {
+    "id": "midtown",
+    "name": "The Fix - Midtown",
+    "address": "123 Main St, Anytown, NY 10018",
+    "lat": 40.7549,
+    "lng": -73.984,
+    "phone": "(555) 123-4567",
+    "hours": "Mon-Sat 10-7",
+    "photos": [
+      "/locations/midtown-1.svg",
+      "/locations/midtown-2.svg",
+      "/locations/midtown-3.svg"
+    ]
+  },
+  {
+    "id": "uptown",
+    "name": "The Fix - Uptown",
+    "address": "456 Park Ave, Anytown, NY 10022",
+    "lat": 40.775,
+    "lng": -73.9647,
+    "phone": "(555) 987-6543",
+    "hours": "Mon-Sun 10-8",
+    "photos": [
+      "/locations/uptown-1.svg",
+      "/locations/uptown-2.svg"
+    ]
+  },
+  {
+    "id": "brooklyn",
+    "name": "The Fix - Brooklyn",
+    "address": "22 Bridge St, Brooklyn, NY 11201",
+    "lat": 40.7033,
+    "lng": -73.9882,
+    "phone": "(555) 246-8100",
+    "hours": "Mon-Sat 9-7",
+    "photos": [
+      "/locations/brooklyn-1.svg",
+      "/locations/brooklyn-2.svg"
+    ]
+  },
+  {
+    "id": "queens",
+    "name": "The Fix - Queens",
+    "address": "88 Jackson Ave, Queens, NY 11101",
+    "lat": 40.7471,
+    "lng": -73.9396,
+    "phone": "(555) 410-2244",
+    "hours": "Daily 10-8",
+    "photos": [
+      "/locations/queens-1.svg",
+      "/locations/queens-2.svg"
+    ]
+  },
+  {
+    "id": "hoboken",
+    "name": "The Fix - Hoboken",
+    "address": "75 River St, Hoboken, NJ 07030",
+    "lat": 40.7372,
+    "lng": -74.0306,
+    "phone": "(555) 920-1122",
+    "hours": "Mon-Fri 10-7, Sat 10-6",
+    "photos": [
+      "/locations/hoboken-1.svg",
+      "/locations/hoboken-2.svg"
+    ]
+  },
+  {
+    "id": "harlem",
+    "name": "The Fix - Harlem",
+    "address": "210 Lenox Ave, New York, NY 10027",
+    "lat": 40.8089,
+    "lng": -73.9456,
+    "phone": "(555) 312-7799",
+    "hours": "Mon-Sat 10-8",
+    "photos": [
+      "/locations/harlem-1.svg",
+      "/locations/harlem-2.svg"
+    ]
+  }
+]
+
+
+

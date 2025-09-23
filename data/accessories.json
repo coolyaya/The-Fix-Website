@@ -1,0 +1,75 @@
+﻿[
+  {
+    "name": "iPhone 17 Impact Case",
+    "tags": ["MagSafe", "Clear", "Anti-Yellow"],
+    "priceRange": "$19-$39",
+    "image": "/promos/iphone17-case.svg",
+    "compatible": ["iPhone 17", "iPhone 17 Pro"]
+  },
+  {
+    "name": "USB-C 30W Charger",
+    "tags": ["Fast Charge", "Compact"],
+    "priceRange": "$24-$29",
+    "image": "/promos/charger.svg",
+    "compatible": ["iPhone", "Android", "Tablets"]
+  },
+  {
+    "name": "Premium Braided USB-C Cable",
+    "tags": ["6ft", "Kevlar"],
+    "priceRange": "$14-$24",
+    "image": "/promos/braided-cable.svg",
+    "compatible": ["USB-C Devices"]
+  },
+  {
+    "name": "Magnetic Wireless Car Mount",
+    "tags": ["360 Swivel", "Vent Mount"],
+    "priceRange": "$29-$39",
+    "image": "/promos/car-mount.svg",
+    "compatible": ["MagSafe Phones", "Magnetic Plates"]
+  },
+  {
+    "name": "Tempered Glass Screen Protector 3-Pack",
+    "tags": ["Anti-Glare", "Easy Install"],
+    "priceRange": "$19-$29",
+    "image": "/promos/screen-protector.svg",
+    "compatible": ["iPhone 15", "iPhone 17"]
+  },
+  {
+    "name": "Galaxy S24 Armor Case",
+    "tags": ["Drop Tested", "Kickstand"],
+    "priceRange": "$22-$34",
+    "image": "/promos/galaxy-case.svg",
+    "compatible": ["Samsung Galaxy S24"]
+  },
+  {
+    "name": "Noise-Cancelling Wireless Earbuds",
+    "tags": ["Bluetooth 5.3", "24hr Battery"],
+    "priceRange": "$59-$89",
+    "image": "/promos/earbuds.svg",
+    "compatible": ["iOS", "Android"]
+  },
+  {
+    "name": "Power Bank 20,000 mAh",
+    "tags": ["PD 45W", "Slim"],
+    "priceRange": "$49-$69",
+    "image": "/promos/power-bank.svg",
+    "compatible": ["USB-C", "USB-A"]
+  },
+  {
+    "name": "Apple Watch Sport Band",
+    "tags": ["Water Resistant", "Quick Release"],
+    "priceRange": "$24-$34",
+    "image": "/promos/watch-band.svg",
+    "compatible": ["Apple Watch 42mm", "Apple Watch 44mm"]
+  },
+  {
+    "name": "Surface Laptop Sleeve",
+    "tags": ["Recycled", "Magnetic Closure"],
+    "priceRange": "$39-$59",
+    "image": "/promos/laptop-sleeve.svg",
+    "compatible": ["13-inch Laptops", "14-inch Laptops"]
+  }
+]
+
+
+

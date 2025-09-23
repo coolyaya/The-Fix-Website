@@ -1,0 +1,105 @@
+﻿[
+  {
+    "category": "Phone",
+    "brand": "Apple",
+    "models": ["iPhone 14", "iPhone 15", "iPhone 17"],
+    "issues": [
+      { "name": "Screen Replacement", "startsAt": 129, "eta": "1-2 hrs" },
+      { "name": "Battery Replacement", "startsAt": 79, "eta": "1 hr" },
+      { "name": "Back Glass", "startsAt": 119, "eta": "2-3 hrs" }
+    ]
+  },
+  {
+    "category": "Phone",
+    "brand": "Samsung",
+    "models": ["Galaxy S22", "Galaxy S23", "Galaxy S24"],
+    "issues": [
+      { "name": "Screen Replacement", "startsAt": 119, "eta": "1-2 hrs" },
+      { "name": "Charging Port", "startsAt": 89, "eta": "2 hrs" },
+      { "name": "Software Tune-Up", "startsAt": 49, "eta": "45 min" }
+    ]
+  },
+  {
+    "category": "Phone",
+    "brand": "Google",
+    "models": ["Pixel 7", "Pixel 8", "Pixel 8a"],
+    "issues": [
+      { "name": "Screen Replacement", "startsAt": 109, "eta": "2 hrs" },
+      { "name": "Battery Replacement", "startsAt": 69, "eta": "1-2 hrs" },
+      { "name": "Rear Camera", "startsAt": 129, "eta": "2 hrs" }
+    ]
+  },
+  {
+    "category": "Tablet",
+    "brand": "Apple",
+    "models": ["iPad Air", "iPad Pro", "iPad Mini"],
+    "issues": [
+      { "name": "Digitizer", "startsAt": 149, "eta": "4 hrs" },
+      { "name": "Battery Replacement", "startsAt": 99, "eta": "2-3 hrs" },
+      { "name": "Charging Port", "startsAt": 109, "eta": "3 hrs" }
+    ]
+  },
+  {
+    "category": "Tablet",
+    "brand": "Samsung",
+    "models": ["Galaxy Tab S9", "Galaxy Tab S8", "Galaxy Tab A8"],
+    "issues": [
+      { "name": "Screen Replacement", "startsAt": 169, "eta": "4-5 hrs" },
+      { "name": "Battery Replacement", "startsAt": 99, "eta": "2-3 hrs" },
+      { "name": "Software Recovery", "startsAt": 59, "eta": "1-2 hrs" }
+    ]
+  },
+  {
+    "category": "Laptop",
+    "brand": "Apple",
+    "models": ["MacBook Air", "MacBook Pro 14", "MacBook Pro 16"],
+    "issues": [
+      { "name": "Keyboard Replacement", "startsAt": 229, "eta": "1-2 days" },
+      { "name": "Battery Replacement", "startsAt": 189, "eta": "1 day" },
+      { "name": "Logic Board Diagnostics", "startsAt": 119, "eta": "2-3 days" }
+    ]
+  },
+  {
+    "category": "Laptop",
+    "brand": "Windows",
+    "models": ["Dell XPS 13", "HP Spectre", "Lenovo Yoga"],
+    "issues": [
+      { "name": "Screen Replacement", "startsAt": 209, "eta": "2-3 days" },
+      { "name": "SSD Upgrade", "startsAt": 149, "eta": "1 day" },
+      { "name": "Fan Cleaning", "startsAt": 69, "eta": "4 hrs" }
+    ]
+  },
+  {
+    "category": "Game Console",
+    "brand": "Nintendo",
+    "models": ["Switch", "Switch OLED", "Switch Lite"],
+    "issues": [
+      { "name": "Joy-Con Drift Repair", "startsAt": 49, "eta": "24 hrs" },
+      { "name": "Screen Replacement", "startsAt": 129, "eta": "1-2 days" },
+      { "name": "Charging Port", "startsAt": 89, "eta": "24 hrs" }
+    ]
+  },
+  {
+    "category": "Game Console",
+    "brand": "Sony",
+    "models": ["PlayStation 5", "PlayStation 4"],
+    "issues": [
+      { "name": "HDMI Port", "startsAt": 139, "eta": "2 days" },
+      { "name": "Fan Replacement", "startsAt": 99, "eta": "2 days" },
+      { "name": "Power Supply", "startsAt": 149, "eta": "3 days" }
+    ]
+  },
+  {
+    "category": "Smartwatch",
+    "brand": "Apple",
+    "models": ["Apple Watch Series 9", "Apple Watch Ultra 2"],
+    "issues": [
+      { "name": "Screen Replacement", "startsAt": 199, "eta": "3 days" },
+      { "name": "Battery Replacement", "startsAt": 89, "eta": "24 hrs" },
+      { "name": "Speaker Repair", "startsAt": 79, "eta": "2 days" }
+    ]
+  }
+]
+
+
+

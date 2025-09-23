@@ -1,4 +1,4 @@
-﻿import type { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -14,8 +14,8 @@ export function PromoBadge({ icon, children, className }: PromoBadgeProps) {
     <Badge
       variant="secondary"
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1 text-xs font-medium uppercase tracking-wide text-muted-foreground backdrop-blur",
-        className
+        "inline-flex items-center gap-2 rounded-full border border-fix-blue/20 bg-fix-blue/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-fix-blue backdrop-blur transition hover:border-fix-blue/30",
+        className,
       )}
     >
       {icon}
@@ -23,5 +23,3 @@ export function PromoBadge({ icon, children, className }: PromoBadgeProps) {
     </Badge>
   );
 }
-
-

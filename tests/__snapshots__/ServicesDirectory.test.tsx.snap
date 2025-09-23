@@ -1,0 +1,351 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ServicesDirectory > renders cards and updates price when a variant is selected > initial-services-directory 1`] = `
+<div>
+  <section
+    class="space-y-8"
+  >
+    <div
+      class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
+    >
+      <div
+        class="flex flex-1 flex-col gap-2"
+      >
+        <label
+          class="sr-only"
+          for="services-search"
+        >
+          Search services
+        </label>
+        <input
+          aria-label="Search services"
+          class="flex h-9 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm w-full"
+          id="services-search"
+          placeholder="Search by repair, device, or keyword"
+          value=""
+        />
+      </div>
+      <div
+        class="flex flex-col gap-2 lg:w-60"
+      >
+        <label
+          class="sr-only"
+          for="services-category"
+        >
+          Filter by category
+        </label>
+        <button
+          aria-autocomplete="none"
+          aria-controls="radix-:r0:"
+          aria-expanded="false"
+          aria-label="Filter by category"
+          class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+          data-state="closed"
+          dir="ltr"
+          id="services-category"
+          role="combobox"
+          type="button"
+        >
+          <span
+            style="pointer-events: none;"
+          >
+            All categories
+          </span>
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m6 9 6 6 6-6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="space-y-12"
+    >
+      <section
+        aria-labelledby="category-batteries-title"
+        class="space-y-6"
+        id="category-batteries"
+      >
+        <div
+          class="sticky top-24 z-10 flex flex-col gap-1 border-b border-border/60 bg-background/95 py-3 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+        >
+          <h2
+            class="text-2xl font-semibold text-foreground"
+            id="category-batteries-title"
+          >
+            Batteries
+          </h2>
+          <p
+            class="text-sm text-muted-foreground"
+          >
+            1
+             
+            service
+          </p>
+        </div>
+        <div
+          class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+        >
+          <div
+            aria-labelledby="ipad-9-battery-service-title"
+            class="rounded-xl border bg-card text-card-foreground shadow group relative flex h-full flex-col justify-between border-border/60"
+            id="ipad-9-battery-service"
+            role="article"
+          >
+            <div
+              class="flex flex-col p-6 space-y-4"
+            >
+              <div
+                class="flex items-start justify-between gap-3"
+              >
+                <div
+                  class="space-y-2"
+                >
+                  <div
+                    class="tracking-tight text-lg font-semibold text-foreground"
+                    id="ipad-9-battery-service-title"
+                  >
+                    iPad 9th Gen Battery Service
+                  </div>
+                  <p
+                    class="text-sm text-muted-foreground"
+                  >
+                    High cycle count battery swap
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-wrap gap-2 text-xs"
+              >
+                <div
+                  class="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-full border-border/50 text-muted-foreground"
+                >
+                  ~
+                  60
+                   min
+                </div>
+                <div
+                  class="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-full border-border/50 text-muted-foreground"
+                >
+                  365
+                  -day warranty
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-6 pt-0 mt-auto space-y-4"
+            >
+              <div
+                class="rounded-2xl border border-border/50 bg-muted/40 p-4"
+              >
+                <div
+                  class="text-xs uppercase tracking-wide text-muted-foreground"
+                >
+                  Current price
+                </div>
+                <div
+                  aria-live="polite"
+                  class="mt-1 text-2xl font-semibold text-foreground"
+                >
+                  $119
+                </div>
+                <div
+                  class="mt-4"
+                >
+                  <button
+                    aria-autocomplete="none"
+                    aria-controls="radix-:r1:"
+                    aria-expanded="false"
+                    aria-label="Choose model"
+                    class="flex h-9 items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 w-full"
+                    data-state="closed"
+                    dir="ltr"
+                    role="combobox"
+                    type="button"
+                  >
+                    <span
+                      style="pointer-events: none;"
+                    >
+                      Wi-Fi
+                       - 
+                      $119
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m6 9 6 6 6-6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="category-screens-title"
+        class="space-y-6"
+        id="category-screens"
+      >
+        <div
+          class="sticky top-24 z-10 flex flex-col gap-1 border-b border-border/60 bg-background/95 py-3 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+        >
+          <h2
+            class="text-2xl font-semibold text-foreground"
+            id="category-screens-title"
+          >
+            Screens
+          </h2>
+          <p
+            class="text-sm text-muted-foreground"
+          >
+            1
+             
+            service
+          </p>
+        </div>
+        <div
+          class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+        >
+          <div
+            aria-labelledby="iphone-14-screen-replacement-title"
+            class="rounded-xl border bg-card text-card-foreground group relative flex h-full flex-col justify-between border-fix-blue/80 shadow-[0_0_0_1.5px_rgba(0,106,255,0.3)]"
+            id="iphone-14-screen-replacement"
+            role="article"
+          >
+            <div
+              class="flex flex-col p-6 space-y-4"
+            >
+              <div
+                class="flex items-start justify-between gap-3"
+              >
+                <div
+                  class="space-y-2"
+                >
+                  <div
+                    class="tracking-tight text-lg font-semibold text-foreground"
+                    id="iphone-14-screen-replacement-title"
+                  >
+                    iPhone 14 Screen Replacement
+                  </div>
+                  <p
+                    class="text-sm text-muted-foreground"
+                  >
+                    Genuine OLED replacement
+                  </p>
+                </div>
+                <div
+                  class="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-secondary/80 rounded-full bg-fix-blue/10 text-fix-blue"
+                >
+                  Featured
+                </div>
+              </div>
+              <div
+                class="flex flex-wrap gap-2 text-xs"
+              >
+                <div
+                  class="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-full border-border/50 text-muted-foreground"
+                >
+                  ~
+                  90
+                   min
+                </div>
+                <div
+                  class="inline-flex items-center border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-full border-border/50 text-muted-foreground"
+                >
+                  180
+                  -day warranty
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-6 pt-0 mt-auto space-y-4"
+            >
+              <div
+                class="rounded-2xl border border-border/50 bg-muted/40 p-4"
+              >
+                <div
+                  class="text-xs uppercase tracking-wide text-muted-foreground"
+                >
+                  Current price
+                </div>
+                <div
+                  aria-live="polite"
+                  class="mt-1 text-2xl font-semibold text-foreground"
+                >
+                  $249
+                </div>
+                <div
+                  class="mt-4"
+                >
+                  <button
+                    aria-autocomplete="none"
+                    aria-controls="radix-:r2:"
+                    aria-expanded="false"
+                    aria-label="Choose option"
+                    class="flex h-9 items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 w-full"
+                    data-state="closed"
+                    dir="ltr"
+                    role="combobox"
+                    type="button"
+                  >
+                    <span
+                      style="pointer-events: none;"
+                    >
+                      OEM
+                       - 
+                      $249
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m6 9 6 6 6-6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
+`;

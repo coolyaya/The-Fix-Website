@@ -46,9 +46,9 @@ export function LocationCard({
     return () => window.clearInterval(id);
   }, [location.photos.length]);
 
-  const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    location.address
-  )}`;
+  const directionsHref =
+    "https://www.google.com/maps/dir/?api=1&destination=" +
+    encodeURIComponent(location.address);
 
   return (
     <Card
@@ -57,8 +57,8 @@ export function LocationCard({
       onFocus={() => onHover?.(location)}
       onBlur={() => onHover?.(null)}
       className={cn(
-        "h-full cursor-pointer border-border/60 transition-shadow hover:shadow-lg",
-        isActive && "border-brand shadow-lg"
+        "h-full cursor-pointer rounded-2xl border border-fix-blue/10 bg-white shadow-soft transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-fix-blue/30",
+        isActive && "border-fix-blue",
       )}
       onClick={() => onSelect?.(location)}
       tabIndex={0}
@@ -76,7 +76,7 @@ export function LocationCard({
             className="object-cover"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-muted text-sm text-muted-foreground">
+          <div className="flex h-full w-full items-center justify-center bg-fix-blue/5 text-sm text-fix-slate">
             Photo coming soon
           </div>
         )}
@@ -85,26 +85,28 @@ export function LocationCard({
             <span
               key={photo}
               className={cn(
-                "h-2 w-2 rounded-full bg-white/40",
-                index === photoIndex && "bg-white"
+                "h-2 w-2 rounded-full bg-white/50",
+                index === photoIndex && "bg-white",
               )}
             />
           ))}
         </div>
       </div>
       <CardHeader>
-        <CardTitle className="flex flex-col gap-1 text-lg">
+        <CardTitle className="flex flex-col gap-1 text-lg text-fix-navy">
           <span>{location.name}</span>
           {distanceMiles !== undefined && (
-            <span className="text-sm font-medium text-brand">{distanceMiles !== undefined ? formatMiles(distanceMiles) : ""} away</span>
+            <span className="text-sm font-medium text-fix-blue">
+              {formatMiles(distanceMiles)} away
+            </span>
           )}
         </CardTitle>
-        <p className="text-sm text-muted-foreground">{location.address}</p>
+        <p className="text-sm text-fix-slate">{location.address}</p>
       </CardHeader>
-      <CardContent className="space-y-3 text-sm text-muted-foreground">
-        <p className="flex items-center gap-2 font-medium text-foreground">
-          <Phone className="h-4 w-4" aria-hidden="true" />
-          <a href={`tel:${location.phone.replace(/[^\d+]/g, "")}`} className="hover:text-brand">
+      <CardContent className="space-y-3 text-sm text-fix-slate">
+        <p className="flex items-center gap-2 font-medium text-fix-navy">
+          <Phone className="h-4 w-4 text-fix-blue" aria-hidden />
+          <a href={`tel:${location.phone}`} className="hover:text-fix-blue">
             {location.phone}
           </a>
         </p>
@@ -119,5 +121,7 @@ export function LocationCard({
     </Card>
   );
 }
+
+
 
 

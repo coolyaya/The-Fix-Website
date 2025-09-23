@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
@@ -28,26 +28,26 @@ export function Footer() {
           <div className="space-y-1 text-sm text-muted-foreground">
             <p className="flex items-center gap-2">
               <Phone className="h-4 w-4" aria-hidden="true" />
-              <a href="tel:15551234567" className="hover:text-foreground">
+              <a href="tel:15551234567" className="hover:text-fix-blue">
                 (555) 123-4567
               </a>
             </p>
             <p className="flex items-center gap-2">
               <Mail className="h-4 w-4" aria-hidden="true" />
-              <a href="mailto:hello@thefix.com" className="hover:text-foreground">
+              <a href="mailto:hello@thefix.com" className="hover:text-fix-blue">
                 hello@thefix.com
               </a>
             </p>
             <p>Hours: Mon-Sat 10-7, Sun 11-5</p>
           </div>
           <div className="flex items-center gap-3 text-muted-foreground">
-            <Link href="#" aria-label="Follow The Fix on Instagram" className="hover:text-foreground">
+            <Link href="#" aria-label="Follow The Fix on Instagram" className="hover:text-fix-blue">
               <Instagram className="h-5 w-5" />
             </Link>
-            <Link href="#" aria-label="Follow The Fix on Facebook" className="hover:text-foreground">
+            <Link href="#" aria-label="Follow The Fix on Facebook" className="hover:text-fix-blue">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="#" aria-label="Subscribe to The Fix on YouTube" className="hover:text-foreground">
+            <Link href="#" aria-label="Subscribe to The Fix on YouTube" className="hover:text-fix-blue">
               <Youtube className="h-5 w-5" />
             </Link>
           </div>
@@ -58,27 +58,27 @@ export function Footer() {
             <p className="text-sm font-semibold text-foreground">Navigate</p>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <Link href="/" className="hover:text-foreground">
+                <Link href="/" className="hover:text-fix-blue">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-foreground">
+                <Link href="/services" className="hover:text-fix-blue">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/locations" className="hover:text-foreground">
+                <Link href="/locations" className="hover:text-fix-blue">
                   Locations
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-foreground">
+                <Link href="/about" className="hover:text-fix-blue">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="hover:text-foreground">
+                <Link href="/support" className="hover:text-fix-blue">
                   Support
                 </Link>
               </li>
@@ -110,19 +110,19 @@ export function Footer() {
               required
               className="w-full"
             />
-            <Button type="submit" className="rounded-full">
+            <Button type="submit" className="rounded-xl">
               Subscribe
             </Button>
           </form>
           {submitted ? (
-            <p className="text-sm font-medium text-brand">Thanks! We'll keep you posted.</p>
+            <p className="text-sm font-medium text-fix-blue">Thanks! We'll keep you posted.</p>
           ) : (
             <p className="text-xs text-muted-foreground">Mocked opt-in. No emails sent.</p>
           )}
         </div>
       </div>
       <div className="border-t border-border/40 bg-background/40 py-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} The Fix. All rights reserved.
+        &copy; {new Date().getFullYear()} The Fix. All rights reserved.
       </div>
     </footer>
   );

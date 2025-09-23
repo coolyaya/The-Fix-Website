@@ -13,7 +13,6 @@ declare global {
         load?: (config: Record<string, unknown>) => void;
       };
     };
-    __vf_loaded?: boolean;
   }
 }
 

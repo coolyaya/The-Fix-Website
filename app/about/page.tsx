@@ -37,7 +37,7 @@ export default function AboutPage() {
     <main className="container space-y-12 py-10">
       <section className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center">
         <div className="space-y-5">
-          <span className="text-xs font-semibold uppercase tracking-wide text-brand">Since 2011</span>
+          <span className="text-xs font-semibold uppercase tracking-wide text-fix-blue">Since 2011</span>
           <h1 className="text-3xl font-semibold tracking-tight">We fix the tech you love</h1>
           <p className="text-sm text-muted-foreground">
             The Fix started in a tiny Midtown kiosk with a simple promise: fix phones faster than anyone else without compromising on quality. A decade later our crew spans six labs, tackling everything from shattered phones and water-logged tablets to laptop board repairs and game console overhauls.
@@ -68,7 +68,7 @@ export default function AboutPage() {
         <div className="space-y-2">
           <h2 className="text-2xl font-semibold tracking-tight">Meet the crew</h2>
           <p className="text-sm text-muted-foreground">
-            A few of the faces behind the counter, labs, and chat—ready to diagnose, repair, and keep you rolling.
+          A few of the faces behind the counter, labs, and chat support ready to diagnose, repair, and keep you rolling.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">

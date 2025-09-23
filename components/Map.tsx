@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
@@ -61,9 +61,10 @@ export function Map({ locations, selectedId, fallbackCenter }: MapProps) {
       }
 
       const el = marker.getElement();
-      el.className = `h-3 w-3 rounded-full border-2 border-white shadow transition-transform ${
-        selectedId === location.id ? "scale-125 bg-brand" : "bg-brand/60"
-      }`;
+      const markerColor =
+        selectedId === location.id ? "scale-125 bg-fix-pink" : "bg-fix-blue/60";
+      el.className =
+        "h-3 w-3 rounded-full border-2 border-white shadow transition-transform " + markerColor;
 
       nextMarkers[location.id] = marker;
     });
@@ -100,5 +101,3 @@ export function Map({ locations, selectedId, fallbackCenter }: MapProps) {
 
   return <div ref={containerRef} className="h-full min-h-[360px] w-full overflow-hidden rounded-3xl" />;
 }
-
-

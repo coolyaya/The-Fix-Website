@@ -82,6 +82,27 @@ export function TicketForm({ categories, locations }: TicketFormProps) {
 
       const data = (await response.json()) as TicketResponse;
       setResult(data);
+
+      const locationMatch = locations.find((item) => item.id === values.locationId);
+      const locationName = locationMatch?.name ?? values.locationId;
+
+      const logResponse = await fetch("/api/tickets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ticketId: data.ticketId,
+          name: values.name,
+          email: values.email,
+          device: values.device,
+          category: values.category,
+          location: locationName,
+        }),
+      });
+
+      if (!logResponse.ok) {
+        throw new Error(`Ticket logging failed with status ${logResponse.status}`);
+      }
+
       reset({
         name: "",
         email: "",
@@ -219,15 +240,15 @@ export function TicketForm({ categories, locations }: TicketFormProps) {
             )}
           />
           {errors.consent ? <p className="text-xs text-destructive">{errors.consent.message}</p> : null}
-          <Button type="submit" disabled={isSubmitting} className="rounded-full">
+          <Button type="submit" disabled={isSubmitting} className="rounded-xl">
             {isSubmitting ? "Submitting..." : "Submit ticket"}
           </Button>
           {errorMessage ? <p className="text-sm text-destructive">{errorMessage}</p> : null}
         </form>
 
         {result ? (
-          <div className="mt-6 space-y-3 rounded-2xl border border-brand/40 bg-brand/10 p-5 text-sm">
-            <p className="text-xs font-semibold uppercase tracking-wide text-brand">
+          <div className="mt-6 space-y-3 rounded-2xl border border-fix-blue/30 bg-fix-blue/10 p-5 text-sm">
+            <p className="text-xs font-semibold uppercase tracking-wide text-fix-blue">
               Ticket #{result.ticketId}
             </p>
             <p className="text-base font-medium text-foreground">{result.summary}</p>

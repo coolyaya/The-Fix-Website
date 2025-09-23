@@ -164,7 +164,7 @@ export function RepairsAccessoriesTabs({
                         <PriceEta
                           price={issue.startsAt}
                           eta={issue.eta}
-                          className="text-xs uppercase tracking-wide text-brand"
+                          className="text-xs uppercase tracking-wide text-fix-blue"
                         />
                       </li>
                     ))}

@@ -128,7 +128,7 @@ export function SupportChat({ defaultEmail = "", defaultName = "" }: SupportChat
               className={cn(
                 "rounded-2xl px-4 py-3",
                 message.role === "user"
-                  ? "bg-brand text-white"
+                  ? "bg-fix-blue text-white"
                   : "bg-muted/70 text-foreground ring-1 ring-border/60"
               )}
             >
@@ -138,8 +138,8 @@ export function SupportChat({ defaultEmail = "", defaultName = "" }: SupportChat
         ))}
         {isLoading ? (
           <div className="flex items-center gap-2 rounded-2xl bg-muted/70 px-4 py-3 text-sm text-muted-foreground">
-            <span className="inline-flex h-2 w-2 animate-pulse rounded-full bg-brand" />
-            The FixBot is typing…
+            <span className="inline-flex h-2 w-2 animate-pulse rounded-full bg-fix-pink" />
+                        The FixBot is typing...
           </div>
         ) : null}
       </div>
@@ -153,7 +153,7 @@ export function SupportChat({ defaultEmail = "", defaultName = "" }: SupportChat
             aria-label="Message"
           />
           <div className="flex flex-wrap items-center gap-3">
-            <Button type="submit" disabled={!canSend} className="rounded-full">
+            <Button type="submit" disabled={!canSend} className="rounded-xl">
               Send
             </Button>
             <ul className="flex flex-wrap gap-2 text-xs text-muted-foreground">

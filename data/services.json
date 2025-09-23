@@ -1,0 +1,238 @@
+[
+  {
+    "category": "Audio",
+    "name": "AirPods Pro Speaker Refresh",
+    "variants": [
+      {
+        "option": "Pair",
+        "price": 69
+      },
+      {
+        "option": "Single Earbud",
+        "price": 39
+      }
+    ],
+    "duration_min": 30,
+    "warranty_days": 90,
+    "description": "Deep clean speaker mesh and replace silicone seals for balanced audio.",
+    "featured": false,
+    "slug": "airpods-pro-speaker-refresh"
+  },
+  {
+    "category": "Batteries",
+    "name": "iPhone 13 Battery Swap",
+    "variants": [
+      {
+        "option": "OEM",
+        "price": 119
+      },
+      {
+        "option": "High-Cycle",
+        "price": 99
+      }
+    ],
+    "duration_min": 45,
+    "warranty_days": 365,
+    "description": "Restore all-day battery life with calibration and diagnostics.",
+    "featured": true,
+    "slug": "iphone-13-battery-swap"
+  },
+  {
+    "category": "Batteries",
+    "name": "MacBook Pro Battery Service",
+    "models": [
+      {
+        "model": "13-inch 2016-2020",
+        "price": 249
+      },
+      {
+        "model": "14-inch 2021-2023",
+        "price": 289
+      },
+      {
+        "model": "16-inch 2021-2023",
+        "price": 329
+      }
+    ],
+    "duration_min": 180,
+    "warranty_days": 365,
+    "description": "Factory-spec lithium pack install with cycle testing.",
+    "featured": false,
+    "slug": "macbook-pro-battery-service"
+  },
+  {
+    "category": "Cameras",
+    "name": "iPhone Rear Camera Calibration",
+    "variants": [
+      {
+        "option": "Standard",
+        "price": 149
+      },
+      {
+        "option": "Pro Models",
+        "price": 179
+      }
+    ],
+    "duration_min": 70,
+    "warranty_days": 180,
+    "description": "Replace and align OIS camera modules with imaging diagnostics.",
+    "featured": false,
+    "slug": "iphone-rear-camera-calibration"
+  },
+  {
+    "category": "Charging",
+    "name": "Nintendo Switch Charging Port Repair",
+    "variants": [
+      {
+        "option": "Port Replacement",
+        "price": 119
+      },
+      {
+        "option": "Microsolder Reflow",
+        "price": 89
+      }
+    ],
+    "duration_min": 120,
+    "warranty_days": 180,
+    "description": "USB-C port rebuild under microscope with ESD-safe tooling.",
+    "featured": false,
+    "slug": "nintendo-switch-charging-port-repair"
+  },
+  {
+    "category": "Charging",
+    "name": "USB-C Charge Port Ultrasonic Clean",
+    "variants": [
+      {
+        "option": "Smartphone",
+        "price": 29
+      },
+      {
+        "option": "Tablet",
+        "price": 39
+      }
+    ],
+    "duration_min": 20,
+    "warranty_days": 30,
+    "description": "Removes debris and corrosion to restore fast charging.",
+    "featured": false,
+    "slug": "usb-c-charge-port-ultrasonic-clean"
+  },
+  {
+    "category": "Data",
+    "name": "Data Transfer & Backup",
+    "variants": [
+      {
+        "option": "Phone to Phone",
+        "price": 59
+      },
+      {
+        "option": "Device to Cloud",
+        "price": 79
+      },
+      {
+        "option": "Advanced (Encrypted)",
+        "price": 119
+      }
+    ],
+    "duration_min": 75,
+    "warranty_days": 30,
+    "description": "Migrate contacts, media, and accounts securely between devices.",
+    "featured": false,
+    "slug": "data-transfer-and-backup"
+  },
+  {
+    "category": "Diagnostics",
+    "name": "Device Diagnostic with Quote",
+    "variants": [
+      {
+        "option": "Phone/Tablet",
+        "price": 29
+      },
+      {
+        "option": "Laptop",
+        "price": 49
+      }
+    ],
+    "duration_min": 60,
+    "warranty_days": 30,
+    "description": "Comprehensive hardware and software check credited toward repairs.",
+    "featured": false,
+    "slug": "device-diagnostic-with-quote"
+  },
+  {
+    "category": "Screens",
+    "name": "iPhone 14 Screen Replacement",
+    "variants": [
+      {
+        "option": "OEM",
+        "price": 249
+      },
+      {
+        "option": "Aftermarket",
+        "price": 179
+      }
+    ],
+    "duration_min": 90,
+    "warranty_days": 180,
+    "description": "Genuine OLED replacement, recalibrated and sealed same-day.",
+    "featured": true,
+    "slug": "iphone-14-screen-replacement"
+  },
+  {
+    "category": "Screens",
+    "name": "iPad 10th Gen Display Repair",
+    "models": [
+      {
+        "model": "Wi-Fi",
+        "price": 239
+      },
+      {
+        "model": "Cellular",
+        "price": 269
+      }
+    ],
+    "duration_min": 150,
+    "warranty_days": 180,
+    "description": "Digitizer and LCD assembly install with dust-free reseal.",
+    "featured": false,
+    "slug": "ipad-10th-gen-display-repair"
+  },
+  {
+    "category": "Screens",
+    "name": "Pixel 8 Screen Replacement",
+    "variants": [
+      {
+        "option": "OEM",
+        "price": 219
+      },
+      {
+        "option": "Aftermarket",
+        "price": 169
+      }
+    ],
+    "duration_min": 105,
+    "warranty_days": 180,
+    "description": "Calibrated OLED with fingerprint sensor realignment.",
+    "featured": false,
+    "slug": "pixel-8-screen-replacement"
+  },
+  {
+    "category": "Water Damage",
+    "name": "Water Damage Treatment",
+    "variants": [
+      {
+        "option": "Smartphone",
+        "price": 89
+      },
+      {
+        "option": "Laptop",
+        "price": 149
+      }
+    ],
+    "duration_min": 180,
+    "warranty_days": 30,
+    "description": "Ultrasonic cleaning and corrosion blocking with board inspection.",
+    "featured": false,
+    "slug": "water-damage-treatment"
+  }
+]

@@ -1,4 +1,4 @@
-﻿# The Fix – Next.js App
+﻿# The Fix - Next.js App
 
 Marketing and light commerce site for The Fix device repair shops. Built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and shadcn/ui components. Includes a hero carousel, reviews marquee, services catalog, locations search with Mapbox (or Google) geocoding, and a support center with AI-assisted chat plus ticket intake.
 
@@ -31,12 +31,41 @@ Restart the dev server after changing environment variables.
 
 Local JSON under `data/` seeds repairs, accessories, locations, and reviews. Swap to a real backend by replacing those imports with fetchers (or hooking the files into a CMS) and reusing the existing TypeScript types.
 
-- `data/repairs.json` – categories, models, pricing, SLAs.
+- `data/services.json` – canonical repair & service catalog powering the Services page (generated via `scripts/import-services.mjs`).
+- `data/repairs.json` – legacy issue list leveraged by the support intake forms.
 - `data/accessories.json` – featured retail catalog.
 - `data/locations.json` – store metadata + image paths.
 - `data/reviews.json` – testimonial snippets for the marquee.
 
 Images live in `public/promos/` and `public/locations/`. Replace the SVG placeholders with photography or marketing assets when ready.
+
+## Update services and prices
+
+1. Drop the latest CSV or JSON price list into the project (any location). Columns should include the service slug, category, description, duration, warranty, and either `option`/`price` rows or `model`/`price` rows.
+2. Run `node scripts/import-services.mjs path/to/source.csv` (use a JSON file instead of CSV if preferred). The script normalises values, validates them with Zod, sorts services, and writes `data/services.json`.
+3. Commit the regenerated `data/services.json`. The Next.js build runs the same schema validation and will fail fast on bad data.
+
+### Quick manual edit
+
+To tweak a single service without regenerating everything, edit the matching object inside `data/services.json` and keep the slug unchanged. Example – bump the OEM price by $10:
+
+```json
+{
+  "category": "Screens",
+  "name": "iPhone 14 Screen Replacement",
+  "variants": [
+    { "option": "OEM", "price": 259 },
+    { "option": "Aftermarket", "price": 179 }
+  ],
+  "duration_min": 90,
+  "warranty_days": 180,
+  "description": "Genuine OLED replacement, recalibrated and sealed same-day.",
+  "featured": true,
+  "slug": "iphone-14-screen-replacement"
+}
+```
+
+After any change run `pnpm test` (unit + snapshot coverage) and `pnpm build` to confirm the catalog still compiles.
 
 ## shadcn/ui components
 
@@ -70,4 +99,3 @@ Responses include a `ticketId`, `summary`, and `nextSteps`, and all payloads are
 - `public/og-default.png` powers social sharing cards; replace it with on-brand artwork when available.
 
 Happy fixing!
-

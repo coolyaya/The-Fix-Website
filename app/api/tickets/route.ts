@@ -17,6 +17,10 @@ const payloadSchema = z.object({
   location: z.string().min(1),
 });
 
+const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || "";
+const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID || "";
+const sheetTabName = process.env.GOOGLE_SHEETS_TAB_NAME || "";
+
 export async function OPTIONS() {
   return new NextResponse(null, {
     status: 204,
@@ -25,6 +29,32 @@ export async function OPTIONS() {
 }
 
 export async function POST(request: Request) {
+  const pkEnv = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY || "";
+
+  if (!serviceAccountEmail || !pkEnv || !spreadsheetId || !sheetTabName) {
+    console.error("[tickets] Missing Google Sheets configuration");
+    return NextResponse.json(
+      { ok: false, error: "Missing Google Sheets configuration" },
+      { status: 500, headers: CORS_HEADERS },
+    );
+  }
+
+  const sanitizedKey = pkEnv.includes("\\n") ? pkEnv.replace(/\\n/g, "\n") : pkEnv;
+  const privateKey = sanitizedKey.replace(/\r\n?/g, "\n").trim();
+
+  if (!privateKey.startsWith("-----BEGIN PRIVATE KEY-----") || !privateKey.includes("END PRIVATE KEY-----")) {
+    console.error("[tickets] Bad private key format");
+    const errorHeaders = new Headers(CORS_HEADERS);
+    errorHeaders.set("Content-Type", "application/json");
+    return new Response(
+      JSON.stringify({ ok: false, error: "bad private key format" }),
+      {
+        status: 500,
+        headers: errorHeaders,
+      },
+    );
+  }
+
   const rawBody = await request.json().catch(() => null);
   if (!rawBody) {
     return NextResponse.json(
@@ -41,25 +71,12 @@ export async function POST(request: Request) {
     );
   }
 
-  const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  const serviceAccountPrivateKey = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
-  const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
-
-  if (!serviceAccountEmail || !serviceAccountPrivateKey || !spreadsheetId) {
-    console.error("[tickets] Missing Google Sheets configuration");
-    return NextResponse.json(
-      { message: "Service unavailable" },
-      { status: 500, headers: CORS_HEADERS },
-    );
-  }
-
-  const privateKey = serviceAccountPrivateKey.replace(/\\n/g, "\n");
-
-  const auth = new google.auth.JWT({
-    email: serviceAccountEmail,
-    key: privateKey,
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-  });
+  const auth = new google.auth.JWT(
+    serviceAccountEmail,
+    undefined,
+    privateKey,
+    ["https://www.googleapis.com/auth/spreadsheets"],
+  );
 
   const sheets = google.sheets({ version: "v4", auth });
 
@@ -79,7 +96,7 @@ export async function POST(request: Request) {
   try {
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range: "Tickets",
+      range: `${sheetTabName}!A1`,
       valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: {

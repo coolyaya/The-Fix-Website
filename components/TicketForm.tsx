@@ -55,6 +55,13 @@ export function TicketForm({ categories, locations }: TicketFormProps) {
   } = useForm<TicketFormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      device: "",
+      category: "",
+      description: "",
+      locationId: "",
       consent: false,
     },
   });
@@ -259,6 +266,4 @@ export function TicketForm({ categories, locations }: TicketFormProps) {
     </Card>
   );
 }
-
-
 

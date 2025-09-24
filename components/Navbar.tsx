@@ -25,7 +25,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:h-20 sm:px-6">
         <Link href="/" className="inline-flex items-center" aria-label="The Fix home">
           <Image
-            src="/logo-thefix.svg"
+            src="/logo-thefix.png"
             alt="The Fix"
             width={160}
             height={40}
@@ -75,7 +75,7 @@ export function Navbar() {
             <SheetContent side="right" className="w-72">
               <SheetHeader className="items-start">
                 <Link href="/" aria-label="The Fix home" className="inline-flex items-center">
-                  <Image src="/logo-thefix.svg" alt="The Fix" width={140} height={36} className="h-8 w-auto" />
+                  <Image src="/logo-thefix.png" alt="The Fix" width={140} height={36} className="h-8 w-auto" />
                 </Link>
               </SheetHeader>
               <nav className="mt-6 grid gap-2">
@@ -113,4 +113,3 @@ export function Navbar() {
     </header>
   );
 }
-

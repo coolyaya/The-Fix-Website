@@ -51,23 +51,53 @@ export function Map({ locations, selectedId, fallbackCenter }: MapProps) {
     const existingMarkers = markersRef.current;
     const nextMarkers: Record<string, Marker> = {};
 
+
     locations.forEach((location) => {
       let marker = existingMarkers[location.id];
+
       if (!marker) {
         const element = document.createElement("div");
-        marker = new mapboxgl.Marker({ element }).setLngLat([location.lng, location.lat]).addTo(map);
+        element.classList.add("mapboxgl-marker", "mapboxgl-marker-anchor-center");
+        const dot = document.createElement("span");
+        dot.setAttribute("data-role", "marker-dot");
+        element.appendChild(dot);
+
+        marker = new mapboxgl.Marker({ element, anchor: "center" })
+          .setLngLat([location.lng, location.lat])
+          .addTo(map);
       } else {
         marker.setLngLat([location.lng, location.lat]);
       }
 
-      const el = marker.getElement();
-      const markerColor =
-        selectedId === location.id ? "scale-125 bg-fix-pink" : "bg-fix-blue/60";
-      el.className =
-        "h-3 w-3 rounded-full border-2 border-white shadow transition-transform " + markerColor;
+      const element = marker.getElement() as HTMLDivElement;
+      element.style.display = "flex";
+      element.style.alignItems = "center";
+      element.style.justifyContent = "center";
+      element.style.pointerEvents = "none";
+
+      let dot = element.querySelector<HTMLSpanElement>("[data-role='marker-dot']");
+      if (!dot) {
+        dot = document.createElement("span");
+        dot.setAttribute("data-role", "marker-dot");
+        element.appendChild(dot);
+      }
+
+      const isSelected = selectedId === location.id;
+      const size = isSelected ? 18 : 14;
+
+      dot.style.display = "block";
+      dot.style.width = size + "px";
+      dot.style.height = size + "px";
+      dot.style.borderRadius = "9999px";
+      dot.style.backgroundColor = isSelected ? "rgb(255, 79, 191)" : "rgba(47, 87, 209, 0.92)";
+      dot.style.border = "2px solid #ffffff";
+      dot.style.boxShadow = "0 8px 20px rgba(15, 23, 42, 0.25)";
+      dot.style.transition = "transform 150ms ease, background-color 150ms ease, width 150ms ease, height 150ms ease";
+      dot.style.transform = isSelected ? "scale(1.12)" : "scale(1)";
 
       nextMarkers[location.id] = marker;
     });
+
 
     Object.keys(existingMarkers).forEach((id) => {
       if (!nextMarkers[id]) {
@@ -101,3 +131,4 @@ export function Map({ locations, selectedId, fallbackCenter }: MapProps) {
 
   return <div ref={containerRef} className="h-full min-h-[360px] w-full overflow-hidden rounded-3xl" />;
 }
+
